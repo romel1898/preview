@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       body{
+        
+        
+       }
+       header{
+        background: #EBEDED;
+       }
+       
+      section{
+        background: #EBEDED;
+        
+        background-size: cover;
+       
+      }
+        h1{
+            color:#F0522D ;
+            text-align: center;
+            font-size: 55px;
+            text-transform: uppercase;
+        }
+        p{
+            color:#53565C ;
+            text-align: center;
+            font-size: 18px;
+        }
+        .header-image{
+            background-image: url(./images/header-image.png);
+            background-size: cover;
+            background-position:center;
+            position: relative;
+            height: 450px;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 88%);  
+        }
+    
+        .login{
+            padding: 20px;
+            border-bottom:3px solid #F0522D ;
+            background: white;
+        }
+        .login ul {
+            text-align: right;
+            margin-right: 88px;
+        }
+        .login ul li {
+            display: inline-block;
+            margin: 0 15px 0 15px;
+        }
+        .login ul li a{
+            color:#53565C;
+            text-decoration: none ;
+            transition: 1s;
+        }
+        .login ul li a:hover{
+            text-decoration: underline #F0522D;
+        }
+        .login ul li:nth-child(3) a{
+            border-radius: 3px ;
+            border: 1px solid #53565C;
+            display: inline-block;
+            padding: 1px 10px 1px 10px;
+
+        }
+        .login ul li:nth-child(3) a:hover{
+            background:#53565C;
+            color: white;
+            text-decoration: none;
+        }
+        .nav{
+            text-align: center;
+            padding: 20px;
+            background: white;
+        }
+        .nav ul{
+            margin:0 90px 0 150px;
+           
+            
+        }
+        .nav img{
+            vertical-align: middle;
+        }
+        .nav ul, nav ul li{
+            display: inline-block;
+        }
+        .nav ul li {
+            margin: 0 15px 0 15px;
+        }
+        .nav ul li a{
+            color:#53565C;
+            text-decoration: none;
+            transition: 1s;
+        }
+        .nav ul li a:hover{
+            text-decoration: underline #F0522D;
+        }
+        .about{
+            background-color: #EBEDED;
+            position: relative;
+        }
+        .about div{
+            padding-top: 50px;
+            margin: auto;
+            width: 948px;
+            height: 421px;
+            text-align: center;
+           
+        }
+        .about div p{
+            text-align: justify;
+            margin: 25px 0 35px 0;
+        }
+        .about div  a{
+            background: white;
+            border-radius: 3px ;
+            border: 1px solid #52565C;
+            color: #52565C;
+            display: inline-block;
+            padding: 2px 25px 2px 25px;
+            text-decoration: none;
+        }
+        .about div  a:hover{
+            background:#53565C;
+            color: white;
+        }
+        .venture-compass {
+            background: #EBEDED;
+            position: relative;
+            z-index: 100 !important;
+        }
+        .venture-compass div{
+           position: relative;
+            background: white;
+            padding-top: 50px;
+            width: 1081px;
+            height: 421px;
+            margin: auto;
+            text-align: center;
+            z-index: 100 !important;
+           
+        }
+        .venture-compass div h1{
+            margin-top: 50px;
+            font-size: 38px;
+        }
+        .venture-compass  div p{
+            text-align: justify;
+            margin: 25px 0 35px 0;
+            padding: 0 150px 0 150px;
+        }
+        .venture-compass  div  a{
+            border-radius: 3px ;
+            border: 1px solid #52565C;
+            color: #52565C;
+            display: inline-block;
+            margin: 0 80px 0 80px;
+            padding: 2px 25px 2px 25px;
+            text-decoration: none;
+        }
+        .venture-compass  a:hover{
+            background:#53565C;
+            color: white;
+        }
+        .location{
+            background: #EBEDED;
+            text-align: center;
+            padding-top: 50px;
+
+        }
+        .location div{
+            display: inline-block;
+            
+        }
+        .location h1{
+            font-size: 38px;
+            text-align: left;
+            margin-left: 50px;
+            margin-top: 100px;
+            margin-bottom: 25px;
+        }
+        .location div:nth-child(1) {
+            background: white;
+            width: 611px;
+            height: 459px;
+            margin-top: 50px;
+            margin-left: 78px;
+            text-align: left;  
+                      
+        }
+        .location div:nth-child(1) ul {
+            margin-left: 50px;
+        }
+        .location div:nth-child(1) ul li{
+            list-style: none; 
+            margin: 10px 0; 
+            color: #52565C;
+            font-size: 22px;
+        }
+        .location div:nth-child(2){
+            position: relative;
+            top: -60px;
+            right: 5%;
+        } 
+        .location a{
+            text-decoration: none;
+            color: #52565C;
+        }
+        .location img {
+            vertical-align:middle;
+            
+        }
+        .testimonials {
+            background: #EBEDED;
+            padding: 50px 0 50px 0;
+        }
+        .testimonials div{
+            background: white;
+            padding-top: 150px;
+            width: 1081px;
+            height: 421px;
+            margin: auto;
+            text-align: center;
+        }
+        .testimonials div p{
+            padding: 50px 100px 50px 100px;
+        }
+        .testimonials div span{
+            color:#53565C ;
+        }
+        footer{
+            background: #53565C;
+            background-size: cover;
+            align-content: center;
+            padding: 55px 10px 25px 60px;
+            text-align: center;
+            border-top: 3px solid #F0522D;
+        }
+        .footer-nav{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: left !important;
+           
+        }
+        .footer-nav ul{
+            list-style: none;
+
+        }
+        .footer-nav ul li{
+            margin: 15px 0;
+            color:#9DA0A3;
+        }
+        .footer-nav ul li a{
+            text-decoration: none;
+            color:#9DA0A3; 
+            transition: 1s;
+        }
+        .footer-nav ul li a:hover{
+            text-decoration: underline;
+        }
+        .social-media{
+            padding-top: 50px;
+        }
+       .social-media a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+        footer span{
+            color:#9DA0A3;
+            text-align: center;
+            font-size: 14px;
+            padding-top: 15px;
+            display: inline-block;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="login">
+            <ul>
+                <li>
+                    <a href="#">Sign up for Ascent Team</a>
+                </li>
+                <li>
+                    <a href="#">Ascent Team Login</a>
+                </li>
+                <li><a href="#">Place Order</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="./images/logo.png" alt="Venture Title & Escrow">
+                    </li>
+                </ul>
+               <ul>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Real State Professionals </a>
+                    </li>
+                    <li>
+                        <a href="#">Buyers & Sellers</a>
+                    </li>
+                    <li>
+                        <a href="#">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+               </ul>
+            </nav>
+        </div>
+        <div class="header-image"></div>
+    </header>
+    <section>
+        <div class="section">
+        <div class="about">
+            <div>   
+                <h1>about venture title</h1>
+                <p>Get ready for title and escrow service in idaho to change-again! We raise the bar what successful home builders, real estate professionals, and attorneys should expect from their title partner.
+
+                <br>
+                <br>
+                  We are building an enterprise of next-generation talent and experienced innovators. Utilizing state-of-the-art technology, we deliver a uniquely Idaho customer eperience that is simple, predictable and personal.
+                </p>
+
+                <a href="#"> Meet the Team</a>
+            </div>
+        </div>
+        <div class="venture-compass">
+            <div>
+                <h1>venture compass</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem numquam, distinctio, ad consequatur eos sint sapiente praesentium consectetur quis assumenda unde veniam quasi nam? Reprehenderit dolore maxime suscipit? Dolores, aut.
+                </p>
+                <a href="#">Login to Venture Compass</a>
+                <a href="#">Become an Ascent Team Member</a>
+            </div> 
+        </div>
+        <div class="location">
+            <div>
+                <h1>locations</h1>
+                <ul>
+                    <li>Current Location</li>
+                    <li>12601 W.Explorer Drive,Suite 200</li>
+                    <li>Boise, Idaho 83713</li>
+                    <li><a href="#">Get Directions</a></li>
+                </ul>
+            </div>
+            <div>
+                <img src="./images/Location.png" alt="Location ">
+            </div>
+        </div>
+        <div class="testimonials">
+            <div>
+            <h1>testimonials</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, est ad neque architecto, ullam repellendus reiciendis exercitationem aperiam officiis sapiente quibusdam autem quos similique vel, optio velit dolore necessitatibus. Recusandae.</p>
+            <span>-Joe & June RealEstate</span>
+           </div>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <img src="./images/footer-logo.png" alt="Footer logo">
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Learn More</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Our Team</a>
+                </li>
+                <li>
+                    <a href="#">Careers</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Explore</a>
+                </li>
+                <li>
+                    <a href="#">Sign up for Ascent Team</a>
+                </li>
+                <li>
+                    <a href="#">Ascent Team Login</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">Get in Touch</a>
+                </li>
+                <li>Current Location</li>
+                <li>12601 W.Explorer Drive,Suite 200</li>
+                <li>Boise, Idaho 83713</li>
+                <li>
+                    <a href="#">explore@ventureidaho.com</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        <span> © 2022 Venture Title | All Rights Reserved | Privacy Policy | Website by 116 & West</span>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/532a64caf8.js" crossorigin="anonymous"></script>
+</body>
+</html>
